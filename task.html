@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Анимация машинки с колесами</title>
+<style>
+body {
+  margin: center;
+  background-image: url(/dorogi-50.webp);
+}
+
+#car {
+margin: 700px;
+  width: 200px;
+  height: 100px;
+  background-color: red;
+  position: relative; 
+  left: -200px;
+  bottom: 50px;
+  animation: drive 5s ease-in-out forwards;
+}
+
+#wheels {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}
+
+.wheel {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  border-radius: 50%; /* Make them round */
+  position: absolute;
+}
+
+#wheel1 { left: 20px; }
+#wheel2 { left: 150px; }
+#wheel3 { left: 20px; bottom: 30px; }
+#wheel4 { left: 150px; bottom: 30px; }
+
+
+@keyframes drive {
+  from { left: -200px; }
+  to { left: calc(100vw - 250px); }
+}
+</style>
+</head>
+<body>
+
+<div id="car">
+  <div id="wheels">
+    <div id="wheel1" class="wheel"></div>
+    <div id="wheel2" class="wheel"></div>
+
+  </div>
+</div>
+
+</body>
+</html>
